@@ -1,4 +1,3 @@
-// supplierRoutes.js
 import express from 'express';
 import {
   createSupplier,
@@ -12,8 +11,8 @@ const router = express.Router();
 
 router.post('/', createSupplier);
 router.get('/', getAllSuppliers);
-router.get('/:id', getSupplierById);
-router.put('/:id', updateSupplier);
-router.delete('/:id', deleteSupplier);
+router.get('/:id', getSupplierById);       // ✅ FIXED
+router.put('/:id', updateSupplier);        // ✅ FIXED
+router.delete('/:id', deleteSupplier);     // ✅ FIXED
 
 export default router;

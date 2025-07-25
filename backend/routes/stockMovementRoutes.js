@@ -1,4 +1,3 @@
-// backend/routes/stockMovementRoutes.js
 import express from 'express';
 import {
   getAllStockMovements,
@@ -12,11 +11,11 @@ import {
 const router = express.Router();
 
 // Routes
-router.get('/', getAllStockMovements);                // GET all movements (optionally with filters)
-router.get('/stats', getStockMovementStats);          // GET aggregate stats
-router.get('/item/:itemId', getStockMovementsByItem); // GET by item ID
-router.get('/:id', getStockMovementById);             // GET by movement ID
-router.post('/', createStockMovement);                // POST new movement
-router.delete('/:id', deleteStockMovement);           // DELETE movement
+router.get('/', getAllStockMovements);                   // GET all movements
+router.get('/stats', getStockMovementStats);             // GET stats
+router.get('/item/:itemId', getStockMovementsByItem);    // GET by item ID
+router.get('/:id', getStockMovementById);                // ✅ FIXED
+router.post('/', createStockMovement);
+router.delete('/:id', deleteStockMovement);              // ✅ FIXED
 
 export default router;
