@@ -1,0 +1,15 @@
+# Node
+node_modules/
+.env
+
+# Logs
+logs
+*.log
+
+# React/Vite
+frontend/dist/
+frontend/node_modules/
+frontend/.env
+
+# Optional
+.DS_Store
