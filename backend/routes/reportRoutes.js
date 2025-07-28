@@ -7,8 +7,8 @@ import {
 
 const router = express.Router();
 
-router.get('/current-stock', getCurrentStockReport);
-router.get('/reorder-list', getReorderListReport);
-router.get('/sales-vs-purchase', getSalesVsPurchaseReport);
+router.get('/:current-stock', getCurrentStockReport);
+router.get('/:reorder-list', getReorderListReport);
+router.get('/:sales-vs-purchase', getSalesVsPurchaseReport);
 
 export default router;
