@@ -30,7 +30,8 @@ app.use(cors());
 app.use(express.json());
 
 // 🧪 Test Route
-app.get('/api', (req, res) => {
+
+app.get('/{*any}', (req, res) => {
   res.send('✅ API is running...');
 });
 
