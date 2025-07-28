@@ -1,5 +1,3 @@
-// backend/routes/itemRoutes.js
-
 import express from 'express';
 import {
   getAllItems,
@@ -11,11 +9,12 @@ import {
 
 const router = express.Router();
 
-router.get('/', getAllItems);
-router.get('/:id', getItemById);
-router.post('/', createItem);
-router.put('/:id', updateItem);
-router.delete('/:id', deleteItem);
-
+// RESTful Item Routes
+router.get('/', getAllItems);           // GET all items
+router.get('/:id', getItemById);        // GET item by ID
+router.post('/', createItem);           // POST new item
+router.put('/:id', updateItem);         // PUT update item by ID
+router.delete('/:id', deleteItem);      // DELETE item by ID
 
 export default router;
+
