@@ -9,12 +9,13 @@ import {
 
 const router = express.Router();
 
-// RESTful Item Routes
-router.get('/', getAllItems);           // GET all items
-router.get('/:id', getItemById);        // GET item by ID
-router.post('/', createItem);           // POST new item
-router.put('/:id', updateItem);         // PUT update item by ID
-router.delete('/:id', deleteItem);      // DELETE item by ID
+// ✅ RESTful Item Routes (Only once)
+router.get('/', getAllItems);
+router.get('/:id', getItemById);
+router.post('/', createItem);
+router.put('/:id', updateItem);
+router.delete('/:id', deleteItem);
 
 export default router;
+
 
