@@ -9,10 +9,10 @@ import {
 
 const router = express.Router();
 
-router.post('/', createSupplier);
-router.get('/', getAllSuppliers);
-router.get('/:id', getSupplierById);       // ✅ FIXED
-router.put('/:id', updateSupplier);        // ✅ FIXED
-router.delete('/:id', deleteSupplier);     // ✅ FIXED
+router.post('/', createSupplier);           // Create new supplier
+router.get('/', getAllSuppliers);           // Get all suppliers
+router.get('/:id', getSupplierById);        // ✅ Get specific supplier by ID
+router.put('/:id', updateSupplier);         // ✅ Update supplier by ID
+router.delete('/:id', deleteSupplier);      // ✅ Delete supplier by ID
 
 export default router;
