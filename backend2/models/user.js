@@ -1,0 +1,49 @@
+// backend2/models/User.js
+
+import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
+
+// 1️⃣ Define schema
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, "Name is required"],
+      trim: true,
+    },
+    email: {
+      type: String,
+      required: [true, "Email is required"],
+      unique: true,
+      lowercase: true,
+    },
+    password: {
+      type: String,
+      required: [true, "Password is required"],
+      minlength: 6,
+    },
+    role: {
+      type: String,
+      enum: ["admin", "staff", "user"], // ✅ Supports different roles
+      default: "user",
+    },
+  },
+  { timestamps: true }
+);
+
+// 2️⃣ Pre-save hook to hash password if modified
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
+
+// 3️⃣ Method to compare entered password with hashed password
+userSchema.methods.matchPassword = async function (enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+
+// 4️⃣ Create and export the model
+const User = mongoose.model("User", userSchema);
+export default User;
