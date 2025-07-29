@@ -1,5 +1,5 @@
 // supplierController.js
-import Supplier from '../models/Supplier.js';
+import Supplier from '../models/supplier.js';
 
 // Create Supplier
 export const createSupplier = async (req, res) => {

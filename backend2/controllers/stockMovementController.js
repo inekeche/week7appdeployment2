@@ -1,5 +1,5 @@
 // Import models
-import StockMovement from '../models/StockMovement.js';
+import StockMovement from '../models/stockMovement.js';
 import Item from '../models/item.js';
 
 // Create Stock Movement and adjust item quantity

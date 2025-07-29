@@ -1,4 +1,4 @@
-import PurchaseOrder from '../models/PurchaseOrder.js';
+import PurchaseOrder from '../models/purchaseOrder.js';
 
 // Create a new purchase order
 export const createPurchaseOrder = async (req, res) => {
