@@ -1,6 +1,6 @@
 import Item from '../models/item.js';
-import PurchaseOrder from '../models/PurchaseOrder.js';
-import SalesOrder from '../models/SalesOrder.js';
+import PurchaseOrder from '../models/purchaseOrder.js';
+import SalesOrder from '../models/salesOrder.js';
 
 // Current Stock Report
 export const getCurrentStockReport = async (req, res) => {
