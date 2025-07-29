@@ -1,7 +1,7 @@
 import SalesOrder from '../models/salesOrder.js';
 import Item from '../models/item.js';
-import StockMovement from '../models/StockMovement.js';
-import PurchaseOrder from '../models/PurchaseOrder.js';
+import StockMovement from '../models/stockMovement.js';
+import PurchaseOrder from '../models/purchaseOrder.js';
 
 // ✅ Create Sales Order
 export const createSalesOrder = async (req, res) => {
